@@ -153,6 +153,39 @@ void add()
       }
       }
 
+//reverse linked list:
+void rev_trav(struct node *st)
+{
+    if (st==NULL)
+    {
+        return;
+    }
+    else
+    {
+        rev_trav(st->next);
+        printf("%d ",st->data);
+    }
+    
+}
+
+//reverse linked list:
+struct node *rev_ll()
+{
+     struct node *temp1=NULL,*temp2=NULL;
+     while (head!=NULL)
+     {
+         temp2=head->next;
+         head->next=temp1;
+         temp1=head;
+         head=temp2;
+     }
+     head=temp1;
+     temp1=NULL;
+     temp2=NULL;
+     return head;
+     
+ }
+
 
 //main function:
 
@@ -161,7 +194,7 @@ int main()
     int choice;
     while (1)
     {
-        printf("\nEnter 1 to link a node:\nEnter 2 to print the linked list:\nEnter 3 to del node:\nEnter 0 to terminate: ");
+        printf("\nEnter 1 to link a node:\nEnter 2 to print the linked list:\nEnter 3 to del node:\nEnter 4 to reverse linked list:\nEnter 5 to totally reverse your linked list:\nEnter 0 to terminate: ");
         scanf("%d",&choice);
       printf("\n");
         switch (choice)
@@ -195,6 +228,18 @@ int main()
             del();
         }
         break;
+
+        case 4:
+        {
+            rev_trav(head);
+        }
+        break;
+
+          case 5:
+            {
+              rev_ll();
+            }
+          
         }
     }
     
