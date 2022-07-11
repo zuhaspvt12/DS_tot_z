@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 //struct info:
+
 struct node{
     int data;
     struct node *next;
@@ -23,7 +24,7 @@ struct node* getnode()
     
 }
 
-//countng no of nodes:
+//counting no of nodes:
       int count()
       {
         int c=0;
@@ -36,7 +37,7 @@ struct node* getnode()
         return c+1;
       }        
 
-//deleting a node:
+//deleting a node wherever you need with the position representaion:
 void del()
 {
     int choice;
