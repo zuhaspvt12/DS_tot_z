@@ -29,7 +29,7 @@ void quicksort(int arr[], int low, int high)
 }
 
 int main(){
-   int i, count, arr[25];
+   int i, count, arr[];
 
    printf("How many elements are u going to enter?: ");
    scanf("%d",&count);
