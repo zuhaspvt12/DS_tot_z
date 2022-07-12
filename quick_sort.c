@@ -29,11 +29,11 @@ void quicksort(int arr[], int low, int high)
 }
 
 int main(){
-   int i, count, arr[];
+   int i, count;
 
    printf("How many elements are u going to enter?: ");
    scanf("%d",&count);
-
+   int arr[count];
    printf("Enter %d elements: ", count);
    for(i=0;i<count;i++)
       scanf("%d",&arr[i]);
